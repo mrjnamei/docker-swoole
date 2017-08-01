@@ -5,7 +5,7 @@ COPY ./sources.list /etc/apt/sources.list
     # 安装 ppa .
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
-RUN apt-get update 
+RUN apt-get update
 #
 #    # Update System Packages
 ##    apt-get -y upgrade
