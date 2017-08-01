@@ -19,14 +19,14 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted' >> /etc/apt/sources.list && \
     echo 'deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties' >> /etc/apt/sources.list && \
     echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe' >> /etc/apt/sources.list && \
-    echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list && \
+    echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list 
     # 安装 ppa .
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
-    apt-get update && \
+    #apt-get update && \
 
     # Update System Packages
-    apt-get -y upgrade
+    #apt-get -y upgrade
 
     # Force Locale
 
