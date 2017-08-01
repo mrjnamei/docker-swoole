@@ -5,7 +5,7 @@ COPY ./sources.list /etc/apt/sources.list
     # 安装 ppa .
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
-RUN echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale && \
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale && \
     locale-gen en_US.UTF-8 && \
 
 
