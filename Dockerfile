@@ -6,7 +6,7 @@ COPY ./sources.list /etc/apt/sources.list
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
 RUN apt-get clean && apt-get update && apt-get install locales && echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale && \
-    locale-gen en_US.UTF-8 && \
+    locale-gen en_US.UTF-8 && export LANG=C.UTF-8 && \
 
 
     apt-get update && \
