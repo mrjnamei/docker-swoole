@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 # 安装阿里源
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
-    touch /etc/apt/sources.list
+    touch /etc/apt/sources.list && \
     echo 'deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties' >> /etc/apt/sources.list && \
     echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted' >> /etc/apt/sources.list && \
     echo 'deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties' >> /etc/apt/sources.list && \
