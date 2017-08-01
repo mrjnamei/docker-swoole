@@ -5,7 +5,11 @@ COPY ./sources.list /etc/apt/sources.list
     # 安装 ppa .
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
-RUN apt-get update && \
+RUN echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale && \
+    locale-gen en_US.UTF-8 && \
+
+
+    apt-get update && \
     apt-get -y upgrade  && \
     apt-get install -y python-software-properties software-properties-common curl && \
     apt-add-repository ppa:ondrej/php -y && \
