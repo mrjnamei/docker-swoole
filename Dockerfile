@@ -86,11 +86,5 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.1/cli/php.ini && \
     sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.1/cli/php.ini && \
     sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.1/cli/php.ini && \
-    sudo sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini && \
-
-
-    # Install Nginx & PHP-FPM
-
-    apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
-     php7.1-fpm
+    sudo sed -i "s/;date.timezone.*/date.timezone = PRC/" /etc/php/7.1/cli/php.ini && \
 
