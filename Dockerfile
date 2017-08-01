@@ -19,14 +19,14 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted' >> /etc/apt/sources.list && \
     echo 'deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties' >> /etc/apt/sources.list && \
     echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe' >> /etc/apt/sources.list && \
-    echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list 
+    echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse' >> /etc/apt/sources.list
     # 安装 ppa .
 #    export DEBIAN_FRONTEND=noninteractive && \
     # Update Package List
-    #apt-get update && \
+RUN apt-get update && \
 
     # Update System Packages
-    #apt-get -y upgrade
+#    apt-get -y upgrade
 
     # Force Locale
 
@@ -35,11 +35,11 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
 #
 #    # Install Some PPAs
 #
-#    apt-get install -y software-properties-common curl && \
+    apt-get install -y python-software-properties software-properties-common curl && \
 #
-#    apt-add-repository ppa:nginx/development -y && \
-#    apt-add-repository ppa:chris-lea/redis-server -y && \
-#    apt-add-repository ppa:ondrej/php -y && \
+    apt-add-repository ppa:nginx/development -y && \
+    apt-add-repository ppa:chris-lea/redis-server -y && \
+    apt-add-repository ppa:ondrej/php -y && \
 #
 #    curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
 #    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
@@ -62,9 +62,9 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
 #
 #    # Install Some Basic Packages
 #
-#    apt-get install -y build-essential dos2unix gcc git libmcrypt4 libpcre3-dev ntp unzip \
-#    make python2.7-dev python-pip re2c supervisor unattended-upgrades whois vim libnotify-bin \
-#    pv cifs-utils mcrypt && \
+    apt-get install -y build-essential dos2unix gcc git libmcrypt4 libpcre3-dev ntp unzip \
+    make python2.7-dev python-pip re2c supervisor unattended-upgrades whois vim libnotify-bin \
+    pv cifs-utils mcrypt && \
 #
 #    # Set My Timezone
 #
@@ -72,12 +72,11 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
 #
 #    # Install PHP Stuffs
 #    # Current PHP
-#    apt-get install -y \
-#    php7.1-cli php7.1-dev \
-#    php7.1-pgsql php7.1-sqlite3 php7.1-gd \
-#    php7.1-curl php7.1-memcached \
-#    php7.1-imap php7.1-mysql php7.1-mbstring \
-#    php7.1-xml php7.1-zip php7.1-bcmath php7.1-soap \
-#    php7.1-intl php7.1-readline php-xdebug php-pear && \
-#
+    apt-get install -y \
+    php7.1-cli php7.1-dev \
+    php7.1-pgsql php7.1-sqlite3 php7.1-gd \
+    php7.1-curl php7.1-memcached \
+    php7.1-imap php7.1-mysql php7.1-mbstring \
+    php7.1-xml php7.1-zip php7.1-bcmath php7.1-soap \
+    php7.1-intl php7.1-readline php-xdebug php-pear
 
