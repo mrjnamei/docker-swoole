@@ -26,7 +26,7 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     apt-get update && \
 
     # Update System Packages
-    apt-get -y upgrade && \
+    apt-get -y upgrade
 
     # Force Locale
 
