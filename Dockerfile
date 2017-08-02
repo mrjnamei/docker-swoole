@@ -10,6 +10,5 @@ RUN apt-get update && apt-get install -y \
     && pecl install swoole && docker-php-ext-enable swoole \
     && echo "log_errors = On" >> /usr/local/etc/php/conf.d/log.ini \
     && echo "error_log=/dev/stderr" >> /usr/local/etc/php/conf.d/log.ini \
-
 EXPOSE 9000
 EXPOSE 80
